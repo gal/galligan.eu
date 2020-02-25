@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notes</title>
+    <link rel="stylesheet" href="../reader.css">
+</head>
+    <body>
+      <h1>ASCII</h1>
+      <h2>Numbers in ascii are 30 + number</h2>
+      <ul>
+        <li>0 = 30, 5 = 35</li>
+      </ul>
+      <h2>Standard input in samphire is ASCII</h2>
+      <code>
+        in 00 ; gets user input and places it in AL register
+      </code>
+      <h2>Intuitively, subtract 30 from the ascii to give the base10 int</h2>
+      <h1>To move a value to memory, move from AL register</h1>
+      <code>
+        mov AL, 04
+        mov [&lt;memory register location&gt;], AL
+      </code>
+      <h1>Stack (Push, Pop) to move between registers</h1>
+      <code>
+        push AL ; moves AL value to stack
+        pop BL ; moves value from stack to BL
+      </code>
+
+    </body>
+    </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notes</title>
+    <link rel="stylesheet" href="../reader.css">
+</head>
+<body>
+    <a href="9.html" target="_blank">Open Source Document</a>
+    <h1>Responsive Web Design (RWD)</h1>
+    <ul>
+        <li>Flexible design (liquid) layout, based on a css grid</li>
+        <li>Flexible images &amp; media</li>
+        <li>Media queries</li>
+        <li>Least-capable client first (DFA)</li>
+    </ul>
+    <h2>Images</h2>
+    <ul>
+        <li>Breakpoints of image pixel sizes used be the standard, but now, there is a wide range of viewport sizes, so this is obsolete</li>
+        <li>Now, we use media queries to change image size in a liquid manner so that we keep the image so as not to look bad at any viewport size</li>
+        <li>Should keep characters per line between at most 45-75, as it becomes difficult to read any more than this. Hence use media queries for <code>50em</code></li>
+        <li>Layout viewport may be larger than visual viewport, ex iPhone</li>
+    </ul>
+    <h3>Fix:</h3>
+    <code>
+        &lt;meta name="viewport" content="initial-scale=1, width=device-width" /&gt;
+      </code>
+    <p>or</p>
+    <code>
+        &amp;viewport {
+          width: device-width; /* not yet adopted by most browsers, but should be in future */</span>
+        }
+      </code>
+    <h1>Making Scalable Images</h1>
+    <ul>
+        <li>Shouldn't send full image, unless no other choice, as uses up bandwidth and also time to scale the image to correct size for viewport</li>
+        <li>Shouldn't scale up images unless necessary</li>
+    </ul>
+    <code>
+        /* note figure tag, not img */
+        figure {
+          overflow: hidden; /*cuts off overflow */
+          overflow: scroll; /* adds a scrollbar and doesn't cut image */
+          overflow: auto; /* adds a scrollbar iff necessary */
+        }
+      </code>
+
+</body>
+
+</html>

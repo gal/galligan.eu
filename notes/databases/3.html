@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notes</title>
+    <link rel="stylesheet" href="../reader.css">
+</head>
+    <body>
+
+      <h1>Data Manipulation Basics</h1>
+      <ul>
+        <li><code>INSERT</code></li>
+        <li><code>DELETE</code></li>
+        <li><code>UPDATE</code></li>
+      </ul>
+      <h2>Add a new row with the details of a new student</h2>
+      <code>
+        INSERT INTO students
+        (VALUES '234423342443', 'Graine', 'Gogerty','1992-12-23',...)
+      </code>
+      <code>
+        UPDATE students
+        SET points = 500
+        WHERE id_number = '11231231233'
+      </code>
+      <h2>Creating a table</h2>
+      <code>
+        CREATE TABLE students
+        (
+            id_number CHAR(9),
+            first_name VARCHAR(20),
+            last_name VARCHAR(30),
+            date_of_birth DATE
+            hometown VARCHAR(30),
+            course CHAR(5),
+            points INTEGER
+        );
+      </code>
+      <h2>To Remove a Table:</h2>
+      <code>
+        DROP TABLE X;
+        DROP TABLE IF EXISTS Y;
+      </code>
+      <h2>To Constructively Alter a Table</h2>
+      <code>
+        ALTER TABLE students ADD gender CHAR 1);
+      </code>
+      <h2>To Delete a Column/Attribute</h2>
+      <code>
+        ALTER TABLE students DROP hometown;
+      </code>
+      <ul>
+        <li>These shouldn't need to be implemented if DB was created properly.</li>
+      </ul>
+      <h1>A Table Should Have a Key - Most Informative Piece of Data, Unique</h1>
+      <code>
+        CREATE TABLE students
+      (
+          ...
+          PRIMARY KEY (id_number)
+          ...
+      )
+      </code>
+      <h2>Useful -- not often used for college</h2>
+      <code>
+        CREATE TABLE guest
+        (
+          id_number INTEGER AUTO_INCREMENT, -- new rows automatically issued freshid
+                                            -- use with primary key only
+          name VARCHAR(20) NOT NULL,        -- inserting/setting NULL will trigger an error
+          nationality VARCHAR(20) = 'Irish'-- all guests Irish unless otherwise specified
+        )
+      </code>
+
+    </body>
+    </html>

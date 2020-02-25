@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notes</title>
+    <link rel="stylesheet" href="../reader.css">
+</head>
+    <body>
+      <h1>Two-Table Queries</h1>
+      <h3>Redundancy</h3>
+      <ul>
+        <li>Replicated data --&gt; Must go to great lengths to avoid, as makes getting or changing data on multiple rows is inefficient.</li>
+      </ul>
+      <h1>Cartesion products</h1>
+      <code>
+        SELECT *
+        FROM persons CROSS JOIN favourite_foods
+      </code>
+      <p>rows = rows(persons) X rows(favourite_foods)</p>
+      <p>cols = cols(persons) X cols(favourite_foods);</p>
+      <h2>Every Singe Combination --&gt; Often, cross-joins are meaningless</h2>
+      <h2>However...</h2>
+      <code>
+        SELECT *
+        FROM persons JOIN favourite_foods
+          ON /*or WHERE */ persons.person_id = favourite_foods.person_id;
+      </code>
+      <h2>Removes everything but combined rows where the person_id match</h2>
+      <code>   class="hljs-keyword">SELECT *
+        FROM persons JOIN favourite_food
+          ON persons.person_id = favourite_foods.person_id
+            WHERE food = 'Pizza';
+      </code>
+      <code>
+        SELECT first_name, last_name, 'likes', food
+        FROM persons AS p
+        JOIN favourite_foods AS f
+          ON p.person_id = f.person_id;
+      </code>
+
+    </body>
+    </html>

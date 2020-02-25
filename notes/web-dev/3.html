@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notes</title>
+    <link rel="stylesheet" href="../reader.css">
+</head>
+
+<body>
+    <a href="3.html" target="_blank">Open Source Document</a>
+    <main>
+        <h1>Displaying of images</h1>
+        <ul>
+            <li>By default, img's are displayed inline</li>
+            <li>Many ways for them to be displayed ina a 'block' on a new line</li>
+            <li>one of the ways to do this is to nest img's in a <code>&lt;figure&gt;</code> element</li>
+            <li><code>&lt;figcaption&gt;</code> --&gt; title for an image</li>
+        </ul>
+        <code>
+          &lt;figure&gt;
+            &lt;figcaption&gt;A photo of a thing&lt;/figcaption&gt;
+                &lt;img src="some_photo.jpg" /&gt;
+                &lt;img src="another_photo.jpg" /&gt;
+          &lt;/figure&gt;
+        </code>
+        <h1>Character Sets</h1>
+        <ul>
+            <li>A character set is a collection of characters
+                <ul>
+                    <li>ASCII characters set is 128 characters, mostly from the modern Latin alphabet</li>
+                    <li>The Unicode character set is currently a little over 100,000 characters</li>
+                </ul>
+            </li>
+            <li>A coded character set assigns a unique number to each distinct character
+                <ul>
+                    <li>In Unicode 'A' is 65, and 'a' is 97 (decimal)</li>
+                </ul>
+            </li>
+            <li>A charaacter encoding refers to the way the numbers are converted to bytes for storage and transmission
+                <ul>
+                    <li>ASCII uses 7 bits for every character</li>
+                    <li>UTF-32 uses 4 bytes for every character</li>
+                    <li>UTF-8 uses 1 byte for all ASCII characters and 2, 3 or 4 for others</li>
+                </ul>
+            </li>
+        </ul>
+        <h1>Why did I write all of that????</h1>
+        <ul>
+            <li>Document character sets must match browser.</li>
+        </ul>
+        <code>
+          &lt;meta charset="utf-8" /&gt;
+        </code>
+        <p>Use this to strictly define character encoding, given you use UTF-8 to code the page</p>
+    </main>
+</body>
+
+</html>

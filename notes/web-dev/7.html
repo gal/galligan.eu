@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notes</title>
+    <link rel="stylesheet" href="../reader.css">
+</head>
+<body>
+    <a href="7.html" target="_blank">Open Source Document</a>
+    <h1>Box-Model</h1>
+    <h2>Every html elements generate at least one CSS box</h2>
+    <code>        display:inline;
+      </code>
+    <ul>
+        <li>CSS' display property defines a box's <em>display type</em></li>
+        <li>Two main display types:
+            <ul>
+                <li>Block
+                    <ul>
+                        <li>the box starts on a new line</li>
+                        <li>it takes up the full width available (ie. the width of its conainer) --&gt; hence they stack vertically</li>
+                    </ul>
+                </li>
+                <li>Inline
+                    <ul>
+                        <li>the box continues on the current line</li>
+                        <li>it takes up only as much width as necessary for its content</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Initial CSS is inline</li>
+        <li>Browsers make most things block</li>
+    </ul>
+    <h1>Box-Model inside out</h1>
+    <ul>
+        <li>Content --&gt; Where text and images appear</li>
+        <li>Padding --&gt; Space between content and border</li>
+        <li>Border --&gt; A 'frame' between padding and margin</li>
+        <li>Margin --&gt; Spacing between elements</li>
+    </ul>
+    <h2>Content</h2>
+    <code>
+        p {
+          width: 30em; /* changes size of content ONLY was before ALL of it in internet explorer*/
+          height: 20em /* changes size of content ONLY, shouldn't really be used, doesn't allow for dynamic */</span>
+        }
+      </code>
+    <ul>
+        <li>Width and height do not change inline elements --&gt; Will be as large/small as required --&gt; no effect if changed</li>
+        <li><strong>Percentages are relative to size of container (parent)</strong></li>
+    </ul>
+    <h2>Padding</h2>
+    <code>
+        p {
+          padding: 2em 1em 2.5em 1.5em; /* 2 - top, 1 - right, 2.5 - bottom, 1.5 - left */
+          padding: 2em 1em; /* 2 - top &amp; bottom, 1 - left &amp; right */
+          padding-top: 1em;
+        }
+      </code>
+    <h3>Background Colours and images</h3>
+    <ul>
+        <li>Only affects content and padding</li>
+    </ul>
+    <h3>Background Image</h3>
+    <code>
+        p {
+          background-image: url('./background.png');
+          }
+      </code>
+    <ul>
+        <li>Images are tiled --&gt; Tesselated</li>
+    </ul>
+    <code>
+        body {
+            background-repeat: horizontal; /* no-repeat */
+            background-position: top left;
+          }
+      </code>
+    <h2>Border</h2>
+    <code>
+        p {
+          border-width: 0.0625em;
+          border-style: solid;
+          border-color: black;
+          border: 0.0625em solid black;
+          border-top-color: pink;
+          /* border-image */
+          border-radius:1em;
+          border-top-right-radius: 2em 1em; /* horizontal radius, vertical radius */
+          }
+      </code>
+    <h3>Box-Shadow</h3>
+    <code>
+        p {
+            box-shadow-inset: 1em /*horizontal*/ 2em /*vertical*/ gray;
+          }
+      </code>
+    <h2>Margin</h2>
+    <code>
+        p {
+          margin: 1em 2em 1em 2em;
+          }
+      </code>
+    <ul>
+        <li>If two elements are vertically-aligned, the distance between will be the largest margin, not added together horizontal ones don't collapse, however</li>
+    </ul>
+
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notes</title>
+    <link rel="stylesheet" href="../reader.css">
+</head>
+<body>
+    <a href="6.html" target="_blank">Open Source Document</a>
+    <h2>Key:</h2>
+    <code>
+        p {
+      	   color: blue;
+      }
+      </code>
+    <ul>
+        <li>color = property</li>
+        <li>blue = value</li>
+    </ul>
+    <h1>Typography</h1>
+    <h2>Text Formatting</h2>
+    <code>
+        p {
+      	   color: blue;
+      	   line-height: 100%; /* space between lines relative to font-size */
+      	   letter-spacing: 1em; /* space between letters */
+      	   text-align: center;
+      	   text-indent: 1em; /* the amount of space preceeding the start of a piece of text */
+      	   text-transform: uppercase; /* uppercase, lowercase */
+      	   word-spacing: 1em; /* space between each word */
+
+        	 text-decoration: underline;
+      	   text-shadow: 0.125em 0 .0625em gray; /* horizontal distance(right), vertical distance(down), colour, blur-radius */
+        }
+      </code>
+    <h2>Font Properties</h2>
+    <code>
+        p {
+          font-family: 'Comic-Sans';
+        	font-size: 2em;
+        	font-style: italic;
+        	font-weight: bold;
+        }
+
+        /* also a shorthand */
+        p {
+          font italic bold 2em 'Comic-Sans';
+        }
+      </code>
+    <h2>Fonts</h2>
+    <ul>
+        <li>Proportional (as wide as required)</li>
+        <li>Monospace (all have same width)
+            <ul>
+                <li>Serifs
+                    <ul>
+                        <li>Messy, stylistic font-style --&gt; old advice to use this for printed documents</li>
+                    </ul>
+                </li>
+                <li>Sans-Serifs
+                    <ul>
+                        <li>Cleaner, more stable --&gt; old advice to use this for screen</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <h3>font-family specifies a Font Stack</h3>
+    <code>
+        body {
+      	   font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+      </code>
+    <h3>Downloadable Fonts</h3>
+    <code>
+        &amp;font-face {
+      	   font-family: MueseoSans;
+      	    src; url('fonts/museosans-500-webfont.woff2') format('woff2');
+        }
+
+        p {
+          font-family: MuseoSans, Arial, sans-serif;
+        }
+      </code>
+    <p>--&gt; Server Downloads font and puts it on server --&gt; massive network performance hit</p>
+    <h2>Only use Google Fonts to be easier --&gt; Don't use copy from site, use import url instead</h2>
+    <ul>
+        <li>Performance hit is even bigger --&gt; GET requests to multiple servers (google) 2 extra requests</li>
+    </ul>
+    <h2>Font Size</h2>
+    <h3>Two types: Absolute, Relative</h3>
+    <ul>
+        <li>Absolute
+            <ul>
+                <li>pt, px, inches, millimetres</li>
+            </ul>
+        </li>
+        <li>Relative
+            <ul>
+                <li>%, em (used to be double inherited font), rem (relative to root's font size), vh (viewport height), vw (viewport width), wmin (smallest of width or height)</li>
+            </ul>
+        </li>
+    </ul>
+    <h2>Advice for Font Size</h2>
+    <ul>
+        <li>Absolutes only <strong>once</strong></li>
+        <li>All others are relatives
+            <ul>
+                <li>Try to use em more --&gt; h1 elements only(?)</li>
+            </ul>
+        </li>
+    </ul>
+
+</body>
+
+</html>

@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass+Mono|Archivo&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.4.2/css/all.css');
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Archivo', sans-serif;
+    color: white;
+}
+
+body {
+    font-size: 16px;
+    margin: auto;
+    background-image: linear-gradient(to bottom right, #000, #1c232e);
+}
+
+header,
+footer {
+    margin: 0px;
+    background-image: linear-gradient(#123, #04053d);
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    float: top;
+    text-align: center;
+    font-family: 'Overpass Mono', monospace;
+}
+
+header li,
+footer li {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 1.4em;
+    text-align: center;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding: 1em;
+}
+
+header a {
+    color: white;
+}
+
+a {
+    color: red;
+    align-content: center;
+    text-decoration: none;
+    padding: 0em;
+    position: relative;
+}
+
+a:hover {
+    animation: a-hover .2s ease forwards;
+}
+
+@keyframes a-hover {
+    to {
+        color: #aaa;
+    }
+}
+
+main {
+    width: 100%;
+    background-image: linear-gradient(to bottom right, #000, #1c232e);
+    z-index: -1;
+}
+
+.banner {
+    background-image: url("./img/mountain.png"), linear-gradient(to bottom right, #000, #1c232e);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 40vh, cover;
+    background-attachment: fixed;
+    padding-bottom: 40vh;
+    text-align: center;
+}
+
+.banner h1 {
+    margin-top: 25vh;
+    margin-bottom: 8vh;
+}
+
+.banner section {
+    width: 100%;
+    position: fixed;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 1em;
+    display: inline-block;
+}
+
+section {
+    margin: auto;
+    text-align: center;
+}
+
+p {
+    margin: .5em;
+}
+
+table {
+    margin: auto;
+    font-size: 1.8em;
+}
+
+td a {
+    color: red;
+}
+
+ul {
+    margin-top: 1em;
+    list-style: none;
+}
+
+.nav-view {
+    z-index: 1000;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: auto;
+    text-align: center;
+    background-image: linear-gradient(to bottom left, #1c232e, #000);
+}
+
+.nav-view>caption {
+    color: red;
+}
+
+.nav-view ul {
+    list-style: none;
+    margin: auto;
+    width: 60%;
+    padding-bottom: 10vh;
+    border-spacing: none;
+}
+
+.nav-view li {
+    text-decoration: none;
+    margin: none;
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+    background-color: #ccc;
+}
+
+.nav-view li:first-child {
+    margin-top: 3em;
+}
+
+.nav-view a {
+    margin: auto;
+    font-size: 2em;
+    display: inline-block;
+    color: red;
+}
+
+.nav-view p a {
+    font-size: 1.1em;
+}
+
+h1 a {
+    background: none;
+    padding: 0em;
+}
+
+section h1 {
+    color: white;
+}
+
+footer {
+    margin-top: 1em;
+    background-image: linear-gradient(#04053d, #123);
+    width: 100%;
+    padding: 0;
+    z-index: 1000;
+    font-size: 0.6em;
+}
+
+footer nav {
+    margin: auto;
+    width: 100%;
+}
+
+footer ul {
+    display: inline-flex;
+}
+
+footer li {
+    display: inline;
+}
+
+small {
+    font-size: 0.6em;
+}
+
+a[href="#"]::before,
+a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: .0625em;
+    border-radius: .0312em;
+    background-color: red;
+    transition: all 0.3s ease-in-out 0s;
+    transform: scaleX(0);
+    visibility: hidden;
+}
+
+a[href="#"]::before,
+a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+article {
+    margin: auto;
+    width: 90%;
+    text-align: center;
+}
+
+article h1 {
+    font-size: 3em;
+}
+
+@media screen and (min-width: 1000px) {
+    .about h1 {
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+        margin: auto;
+    }
+    .about p {
+        text-align: center;
+        width: 60%;
+        margin: auto;
+    }
+    .about {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 3em;
+        font-size: 1.8em;
+    }
+    .about:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+}
+
+.about {
+    width: 80%;
+}
+
+.ico {
+    padding: 1em;
+}
+
+a i {
+    font-size: 3em;
+}
+
+.selection table {
+    border-collapse: collapse;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    font-size: 1.6em;
+}
+
+th {
+    text-align: center;
+}
+
+.selection td,
+th {
+    padding: 1em;
+    border: 1px solid black;
+}
+
+.selection tr:nth-child(even) {
+    background-color: #bbb;
+}
+
+table caption {
+    margin-bottom: 1em;
+}
+
+#notes {
+    transition: opacity 500ms;
+    /* display: none; */
+    opacity: 0;
+    margin: auto;
+    width: 90%;
+}
+
+iframe:target {
+    display: block;
+}
+
+iframe {
+    display: none;
+    z-index: 2;
+    width: 100%;
+    min-height: 80vh;
+    border: none;
+    margin: auto;
+    position: relative;
+    transition: all 5s ease-in-out;
+    width: 90%;
+    max-height: 60v
+}
+
+iframe a {
+    display: sticky;
+}
+
+p a {
+    font-size: 1em;
+}
+
+caption {
+    font-size: 3em;
+    display: block;
+}
