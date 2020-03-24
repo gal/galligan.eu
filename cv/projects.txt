@@ -1,0 +1,12 @@
+-- Py-The-Way -- 
+2018
+Recommendation System for where best suits the user to live in America.
+
+This project is a recommendation system that recommends where a user should live 
+in the US using big data, python and pandas. This project was part of a hackathon 
+hosted by IBM at coderdojo, and this project one first place, pitting against some 
+of IBM’s own employees.
+
+-- Pressx -- 
+2019
+A Modular CMS in devlopmnt using Go and the gorilla/mux library. The backend is currently in development, and a MVP will likely be available before Summer of this year

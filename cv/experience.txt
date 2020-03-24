@@ -1,0 +1,24 @@
+-- DellEMC --
+Mahon Point, Cork — Software Developer
+2017
+I wrote testing software to test DellEMC’s websites using Python, and got lots of experience with the IT workflow involved with IT.. 
+
+-- DCE Computers -- 
+Coachford, Cork 
+2017
+I did work experience at this company, where I helped set up virtualisation technologies in schools across the county, and repaired multiple laptops.
+
+-- IBM Cork Coderdojo -- 
+Cork Airport Business Park - Mentor
+2017 --> Current Day 
+I mentor at Coderdojo, which gives me a very in-depth experience in various aspects of Computer Science. I also learned many good teamwork skills, how to work with children and also mentorship/teaching skills. 
+
+-- Munster Programming Training --
+UCC Dept. of CS
+2017 - 2019
+This course hosted in UCC taught me a lot about computational programming. I also learned a considerable amount about programming for competition.
+
+-- Netsoc --
+UCC Committee SysAdmin/DevOps 
+I have a place on the committee of one of the most involved societies at UCC, Netsoc. As a sysadmin I have learned some extra things about Site Reliability Engineering and more general knowledge of the linux kernel and operating system. My committee membership is a long-term position, lasting for as long as I remain enrolled at UCC
+
